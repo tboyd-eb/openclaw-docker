@@ -10,7 +10,7 @@ This is my OpenClaw docker-compose setup.
   - `dbus-user-session` - D-Bus user session for Chromium, etc.
   - `docker` - Run dockerized MCP tools
   - `jq` - Massage JSON output
-  - `ripgrep` - For memory search
+  - `ripgrep` - For session transcript search
   - `sqlite3` - Query SQLite database files
   - `tmux` - Terminal manipulation via send-keys
   - `wordnet` - Dictionary, thesaurus, etc.
