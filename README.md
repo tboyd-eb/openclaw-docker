@@ -65,6 +65,12 @@ The server is a personal project of mine,
 [haliphax-openclaw/openclaw-canvas-web][]. See that repository for additional
 information about configuring it and showing your agents how to use it.
 
+## `socat` Container
+
+A sidecar container running `socat` is used to provide the host docker socket
+to the `openclaw` container. This is to work around an issue with Rancher
+Desktop (my docker provider on macOS).
+
 ## Other Mods
 
 I use a modified version of [openclaw-better-gateway][] for my chat UI, since
