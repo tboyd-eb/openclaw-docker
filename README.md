@@ -100,6 +100,51 @@ I've done a few other things to customize my installation further:
   session context (later versions of OpenClaw provide isolation for
   _heartbeat_)
 
+Heartbeat cron job:
+
+<details>
+<summary>Click to expand</summary>
+<br />
+
+```json
+{
+  "id": "2d9a5662-c9cb-4f6b-95b2-284fa33d8d9e",
+  "agentId": "main",
+  "name": "Hourly heartbeat (isolated)",
+  "description": "Replaces gateway heartbeat: isolated session, hourly checklist Mon–Fri 9–5 America/Chicago",
+  "enabled": true,
+  "createdAtMs": 1774476151232,
+  "updatedAtMs": 1774551616028,
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 9-17 * * 1-5",
+    "tz": "America/Chicago"
+  },
+  "sessionTarget": "isolated",
+  "wakeMode": "now",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Hourly scheduled check (gateway heartbeat is disabled). Read HEARTBEAT.md in the workspace root and work through the checklist using tools as needed. If nothing needs user-facing follow-up, end with HEARTBEAT_OK on its own line.",
+    "lightContext": true
+  },
+  "delivery": {
+    "mode": "none",
+    "channel": "last"
+  },
+  "state": {
+    "nextRunAtMs": 1774555200000,
+    "lastRunAtMs": 1774551600019,
+    "lastRunStatus": "ok",
+    "lastStatus": "ok",
+    "lastDurationMs": 16009,
+    "lastDelivered": false,
+    "lastDeliveryStatus": "not-delivered",
+    "consecutiveErrors": 0
+  }
+}
+```
+</details>
+
 [haliphax-openclaw/openclaw-canvas-web]: https://github.com/haliphax-openclaw/openclaw-canvas-web
 [openclaw-better-gateway]: https://github.com/tboyd-eb/openclaw-better-gateway
 [openclaw-cursor-brain]: https://github.com/tboyd-eb/openclaw-cursor-brain
