@@ -63,6 +63,8 @@ Shell into the running instance:
 docker compose exec -it openclaw bash
 ```
 
+---
+
 Now, from within the container...
 
 Install `node-pty` and build the `openclaw-better-gateway` project from source:
