@@ -1,0 +1,46 @@
+networks:
+  default:
+    driver: bridge
+  
+services:
+  socat:
+    image: alpine/socat
+    container_name: socat
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: "tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock"
+  openclaw:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: openclaw
+    container_name: openclaw
+    depends_on: [socat]
+    restart: unless-stopped
+    privileged: true
+    working_dir: /home/node
+    ports:
+      - "127.0.0.1:18789:18789"  # gateway
+      - "127.0.0.1:18792:18792"  # browser relay
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./home:/home/node
+    environment:
+      DBUS_SESSION_BUS_ADDRESS: "unix:path=/tmp/dbus-session.sock"
+      OPENCLAW_CONFIG_DIR: "/home/node/.openclaw"
+      OPENCLAW_WORKSPACE_DIR: "/home/node/.openclaw/workspace"
+  canvas:
+    build:
+      dockerfile: canvas.Dockerfile
+      context: .
+    image: canvas
+    container_name: canvas
+    depends_on: [openclaw]
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3456:3456"
+    volumes:
+      - ./home:/home/node
+    environment:
+      OPENCLAW_GATEWAY_WS_URL: "ws://openclaw:18789"
