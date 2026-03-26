@@ -102,7 +102,7 @@ I've done a few other things to customize my installation further:
   session context (later versions of OpenClaw provide isolation for
   _heartbeat_)
 
-Heartbeat cron job:
+### Heartbeat cron job
 
 <details>
 <summary>Click to expand</summary>
