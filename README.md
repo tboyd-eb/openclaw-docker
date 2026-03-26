@@ -115,8 +115,12 @@ I've done a few other things to customize my installation further:
   _heartbeat_)
 - Added the `fan-out` and `ritual` [skills][] from my personal projects to
   provide agents with task management and collaboration tools
+- Added the [todo-mcp-server][] from my personal projects to support the
+  `fan-out` skill and other task management use cases
 - Added the `rooms` [extension][] from my personal projects to support the
   `ritual` skill and other broadcast use cases
+- Configured a variety of MCP servers for Atlassian, Slack, AWS/CDK docs,
+  GitHub, etc.
 
 ### Heartbeat cron job
 
@@ -169,4 +173,5 @@ I've done a few other things to customize my installation further:
 [openclaw-cursor-brain]: https://github.com/tboyd-eb/openclaw-cursor-brain
 [openclaw-null-embeddings]: https://github.com/tboyd-eb/openclaw-null-embeddings
 [skills]: https://github.com/haliphax-openclaw/skills
+[todo-mcp-server]: https://github.com/haliphax-openclaw/todo-mcp-server
 
