@@ -20,17 +20,40 @@ This is my OpenClaw docker-compose setup.
 - Canvas sidecar server for agentic UI
 - OpenClaw runs as non-root user
 
-## Quick Start
+## Getting Started
 
 Assuming you already have Cursor auth tokens in `~/.config/cursor`:
 
 ```sh
 mkdir -p home/.config
 cp -R ~/.config/cursor home/.config/
+```
+
+Copy starter files:
+
+```sh
 cp bashrc home/.bashrc
 cp bash_profile home/.bash_profile
 cp chromium-wrapper home/
+```
+
+Clone extension projects:
+
+```sh
+mkdir -p home/.openclaw/extensions
+git clone git@github.com:tboyd-eb/openclaw-better-gateway.git home/.openclaw/extensions/openclaw-better-gateway
+git clone git@github.com:tboyd-eb/openclaw-cursor-brain.git home/.openclaw/extensions/openclaw-cursor-brain
+```
+
+Build the container images:
+
+```sh
 docker compose build
+```
+
+Start the containers:
+
+```sh
 docker compose up -d
 ```
 
@@ -40,7 +63,19 @@ Shell into the running instance:
 docker compose exec -it openclaw bash
 ```
 
-Run the configuration wizard:
+Now, from within the container...
+
+Install `node-pty` and build the `openclaw-better-gateway` project from source:
+
+```sh
+cd ~/.openclaw/extensions/openclaw-better-gateway
+npm i node-pty
+npm rebuild node-pty
+npm ci
+npm run build
+```
+
+_Finally_, run the OpenClaw configuration wizard:
 
 ```sh
 openclaw config
@@ -50,10 +85,6 @@ The `home/` directory is mounted to `/home/node` within the container, which is
 the home directory for the user running OpenClaw. The OpenClaw installation
 itself lives at `/home/node/.openclaw`, and the global npm package library
 is set to `/home/node/npm`.
-
-You will need to install my fork of the `openclaw-cursor-brain` plugin once
-OpenClaw is running in order to use Cursor as your model provider. (See the
-[Other Mods](#other-mods) section.)
 
 ## Shell Environment
 
