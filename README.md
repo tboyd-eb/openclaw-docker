@@ -113,6 +113,10 @@ I've done a few other things to customize my installation further:
   _cron_ system job that runs in isolation to avoid polluting main agent
   session context (later versions of OpenClaw provide isolation for
   _heartbeat_)
+- Added the `fan-out` and `ritual` [skills][] from my personal projects to
+  provide agents with task management and collaboration tools
+- Added the `rooms` [extension][] from my personal projects to support the
+  `ritual` skill and other broadcast use cases
 
 ### Heartbeat cron job
 
@@ -159,8 +163,10 @@ I've done a few other things to customize my installation further:
 ```
 </details>
 
+[extension]: https://github.com/haliphax-openclaw/extensions
 [haliphax-openclaw/openclaw-canvas-web]: https://github.com/haliphax-openclaw/openclaw-canvas-web
 [openclaw-better-gateway]: https://github.com/tboyd-eb/openclaw-better-gateway
 [openclaw-cursor-brain]: https://github.com/tboyd-eb/openclaw-cursor-brain
 [openclaw-null-embeddings]: https://github.com/tboyd-eb/openclaw-null-embeddings
+[skills]: https://github.com/haliphax-openclaw/skills
 
