@@ -38,6 +38,12 @@ Shell into the running instance:
 docker compose exec -it openclaw bash
 ```
 
+Run the configuration wizard:
+
+```sh
+openclaw config
+```
+
 The `home/` directory is mounted to `/home/node` within the container, which is
 the home directory for the user running OpenClaw. The OpenClaw installation
 itself lives at `/home/node/.openclaw`, and the global npm package library

@@ -25,10 +25,6 @@ services:
       - "127.0.0.1:18792:18792"  # browser relay
     volumes:
       - ./home:/home/node
-    environment:
-      DBUS_SESSION_BUS_ADDRESS: "unix:path=/tmp/dbus-session.sock"
-      OPENCLAW_CONFIG_DIR: "/home/node/.openclaw"
-      OPENCLAW_WORKSPACE_DIR: "/home/node/.openclaw/workspace"
   canvas:
     build:
       dockerfile: canvas.Dockerfile

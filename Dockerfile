@@ -64,6 +64,8 @@ set -eo pipefail
     curl https://cursor.com/install -fsS | bash;
     npm config set prefix /home/node/npm;
     npm i -g openclaw@2026.3.11 clawhub mcporter;
+    openclaw gateway --allow-unconfigured;
+    exit;
 }
 
 dbus-daemon --session --fork --address=unix:path=/tmp/dbus-session.sock
