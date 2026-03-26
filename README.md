@@ -70,6 +70,12 @@ provider. It needed some adjustment to better support the `webchat` message
 platform and a bit of tidying up so that it doesn't fire its entire setup
 routine every time the `openclaw` CLI gets used.
 
+I originally wrote a hacky workaround for a bug in OpenClaw so that I could
+use BM25 keyword search for the `memorySearch` feature, but I eventually
+abandoned that in favor of running the `nomic-embed-text-v1.5` model locally
+using LMStudio. If you're interested, that project is
+[openclaw-null-embeddings][].
+
 ## Version Pinning
 
 This project currently pins OpenClaw to the `2026.3.11` release, as the plugin
@@ -79,3 +85,5 @@ before later versions can be used.
 [haliphax-openclaw/openclaw-canvas-web]: https://github.com/haliphax-openclaw/openclaw-canvas-web
 [openclaw-better-gateway]: https://github.com/tboyd-eb/openclaw-better-gateway
 [openclaw-cursor-brain]: https://github.com/tboyd-eb/openclaw-cursor-brain
+[openclaw-null-embeddings]: https://github.com/tboyd-eb/openclaw-null-embeddings
+
