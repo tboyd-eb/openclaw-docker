@@ -93,6 +93,8 @@ before later versions can be used.
 
 I've done a few other things to customize my installation further:
 
+- Set the default model for all agents to `cursor-local/composer-2` to
+  _drastically_ reduce usage costs
 - Added an SSH key to my GitHub settings and configured my agent to use it for
   git operations as well as setting up its global `user.name` and `user.email`
 - Disabled the built-in _heartbeat_ system and replaced it with an hourly
