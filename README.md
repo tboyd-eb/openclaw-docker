@@ -36,6 +36,10 @@ the home directory for the user running OpenClaw. The OpenClaw installation
 itself lives at `/home/node/.openclaw`, and the global npm package library
 is set to `/home/node/npm`.
 
+You will need to install my fork of the `openclaw-cursor-brain` plugin once
+OpenClaw is running in order to use Cursor as your model provider. (See the
+"Other Mods" section.)
+
 ## Shell Environment
 
 Any environment variables you want to stick need to go in `home/.bash_profile`.
