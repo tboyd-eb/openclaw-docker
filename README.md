@@ -73,7 +73,7 @@ Install `node-pty` and build the `openclaw-better-gateway` project from source:
 ```sh
 cd ~/.openclaw/extensions/openclaw-better-gateway
 npm i node-pty
-npm rebuild node-pty
+npm rebuild node-pty  # needed to build node-pty platform-specific binary
 npm ci
 npm run build
 ```
