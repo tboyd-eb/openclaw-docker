@@ -1,6 +1,7 @@
 # OpenClaw Docker Setup
 
-This is my OpenClaw docker-compose setup.
+This is my OpenClaw docker-compose setup. There are many like it,
+but this one is _mine_. And maybe yours, now, too? 🤷
 
 ## Features
 
