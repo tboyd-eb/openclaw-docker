@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /usr/lib/chromium/chromium --no-zygote --no-sandbox --headless=new --disable-dev-shm-usage --ignore-certificate-errors "$@"

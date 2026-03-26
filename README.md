@@ -27,6 +27,7 @@ mkdir -p home/.config
 cp -R ~/.config/cursor home/.config/
 cp bashrc home/.bashrc
 cp bash_profile home/.bash_profile
+cp chromium-wrapper home/
 docker compose build
 docker compose up -d
 ```
@@ -87,6 +88,17 @@ using LMStudio. If you're interested, that project is
 This project currently pins OpenClaw to the `2026.3.11` release, as the plugin
 architecture changed afterward. The mods mentioned above will need to be fixed
 before later versions can be used.
+
+## Extra Steps
+
+I've done a few other things to customize my installation further:
+
+- Added an SSH key to my GitHub settings and configured my agent to use it for
+  git operations as well as setting up its global `user.name` and `user.email`
+- Disabled the built-in _heartbeat_ system and replaced it with an hourly
+  _cron_ system job that runs in isolation to avoid polluting main agent
+  session context (later versions of OpenClaw provide isolation for
+  _heartbeat_)
 
 [haliphax-openclaw/openclaw-canvas-web]: https://github.com/haliphax-openclaw/openclaw-canvas-web
 [openclaw-better-gateway]: https://github.com/tboyd-eb/openclaw-better-gateway
