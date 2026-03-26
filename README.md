@@ -16,7 +16,7 @@ This is my OpenClaw docker-compose setup.
   - `sqlite3` - Query SQLite database files
   - `tmux` - Terminal manipulation via send-keys
   - `wordnet` - Dictionary, thesaurus, etc.
-- Cursor agent (see [Other Mods](#other-mods) section)
+- Cursor as model provider (see [Other Mods](#other-mods) section)
 - Canvas sidecar server for agentic UI
 - OpenClaw runs as non-root user
 
