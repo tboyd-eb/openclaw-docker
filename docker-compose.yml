@@ -24,7 +24,6 @@ services:
       - "127.0.0.1:18789:18789"  # gateway
       - "127.0.0.1:18792:18792"  # browser relay
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
       - ./home:/home/node
     environment:
       DBUS_SESSION_BUS_ADDRESS: "unix:path=/tmp/dbus-session.sock"
