@@ -14,7 +14,7 @@ This is my OpenClaw docker-compose setup.
   - `sqlite3` - Query SQLite database files
   - `tmux` - Terminal manipulation via send-keys
   - `wordnet` - Dictionary, thesaurus, etc.
-- Cursor agent (see "Other Mods" section)
+- Cursor agent (see [Other Mods](#other-mods) section)
 - Canvas sidecar server for agentic UI
 - OpenClaw runs as non-root user
 
@@ -44,7 +44,7 @@ is set to `/home/node/npm`.
 
 You will need to install my fork of the `openclaw-cursor-brain` plugin once
 OpenClaw is running in order to use Cursor as your model provider. (See the
-"Other Mods" section.)
+[Other Mods](#other-mods) section.)
 
 ## Shell Environment
 
