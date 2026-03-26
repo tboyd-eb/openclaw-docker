@@ -89,6 +89,15 @@ the home directory for the user running OpenClaw. The OpenClaw installation
 itself lives at `/home/node/.openclaw`, and the global npm package library
 is set to `/home/node/npm`.
 
+## Web UI
+
+The "Better Gateway" web UI is served at
+[http://localhost:18789/better-gateway/](http://localhost:18789/better-gateway/).
+It provides a cleaner `webchat` interface, a Monaco IDE for editing workspace
+files, and a terminal for exploring/running commands within the container shell.
+
+I used Chrome's "Install Page as App" feature to give it its own window.
+
 ## Shell Environment
 
 Any environment variables you want to stick need to go in `home/.bash_profile`.
