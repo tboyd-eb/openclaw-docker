@@ -98,7 +98,8 @@ Changes to interactive shells **only** need to go in `home/.bashrc`.
 ## Canvas Server
 
 The first time you spin up the Canvas server, you will need to allow its device
-pairing request. Use `openclaw devices list` to find it.
+pairing request. Use `openclaw devices list` to find it, and
+`openclaw devices approve <id>` once you know the request ID.
 
 The Canvas web app is served at [http://localhost:3456](http://localhost:3456)
 and will redirect to the `/main/` session by default.
