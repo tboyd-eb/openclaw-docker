@@ -1,0 +1,6 @@
+#!/bin/sh
+cd ~/openclaw
+docker compose down
+lms server stop
+lms unload -a
+

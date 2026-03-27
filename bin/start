@@ -1,0 +1,8 @@
+#!/bin/sh
+lms unload -a
+lms load text-embedding-nomic-embed-text-v1.5
+lms server start
+cd ~/openclaw
+docker compose up -d
+open -a ~/Applications/Chrome\ Apps.localized/OpenClaw.app
+
